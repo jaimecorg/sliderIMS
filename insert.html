@@ -3,29 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/insert.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
     <title>Insertar</title>
 </head>
 <body>
-    <h1>Insertar producto</h1>
+    <h1>Insertar</h1>
 
-    <a href="index.html">Inicio</a>
+    <div class="inicio">
+        <a href="index.html">Inicio</a>
+    </div>
 
-    <form action="">
-        <label for="">ID: </label>
-        <input type="text" id="identificador" name="identificador">
-        </br>
-        <label for="">Nombre: </label>
-        <input type="text" id="nombre" name="nombre">
-        </br>
-        <label for="">Precio: </label>
-        <input type="text" id="precio" name="precio">
-        </br>
-        <label for="">Visual: </label>
-        <input type="text" id="visual" name="visual">
-
-        <div class="botonInsertar">
-            <input type="button" value="Insertar producto">
-        </div>
+    <form id="formularioProducto">
+        <input type="text" name="id" placeholder="ID del producto">
+        <input type="text" name="nombre" placeholder="Nombre del producto">
+        <input type="text" name="precio" placeholder="Precio del producto">
+        <input type="text" name="visual" placeholder="Visual del producto">
+        <button type="submit">Guardar Producto</button>
     </form>
+
 </body>
 </html>
