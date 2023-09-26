@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+addEventListener('DOMContentLoaded', function() {
     let tablaContendor = document.getElementById('tablaProductos');
     let tabla = tablaContendor.getElementsByTagName("table")[0];
 
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function crearTabla(tabla, productos = []){
-    tabla.setAttribute("border", 2);
+    //tabla.setAttribute("border", 2);
     // Crear una fila de encabezado
     const filaEncabezado = tabla.insertRow(0);
 
