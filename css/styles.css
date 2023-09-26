@@ -1,0 +1,33 @@
+body {
+    background-image: url('../img/fondo.png');
+    background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija el fondo */
+}
+
+h1{
+    color: white;
+}
+
+table{
+    border: 0px;
+    background-color: rgba(250, 235, 215, 0.432) ;
+}
+tbody {
+    margin: 15px;
+    padding: 15px;
+}
+tr:first-child{
+    color: white;
+    font-weight: bold;
+    background-color: cadetblue;
+
+
+}
+td {
+    margin: 15px;
+    padding: 15px;
+}
+
+
+  
