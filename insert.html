@@ -8,19 +8,35 @@
     <title>Insertar</title>
 </head>
 <body>
-    <h1>Insertar</h1>
 
-    <div class="inicio">
-        <a href="index.html">Inicio</a>
+    <div class="contenedor">
+        <h1>Insertar</h1>
+
+        <div class="inicio">
+            <a href="index.html">Inicio</a>
+        </div>
+    
+        <form id="formularioProducto">
+            <div class="inputForm">
+                <label>ID: </label>
+                <input type="text" name="id" placeholder="ID del producto">
+            </div>
+            <div class="inputForm">
+                <label>Nombre: </label>
+                <input type="text" name="nombre" placeholder="Nombre del producto">            </div>
+            <div class="inputForm">
+                <label>Precio: </label>
+                <input type="text" name="precio" placeholder="Precio del producto">
+            </div>
+            <div class="inputForm">
+                <label>Visual: </label>
+                <input type="text" name="visual" placeholder="Visual del producto">
+            </div>
+            
+            <button type="submit">Guardar Producto</button>
+        </form>
     </div>
-
-    <form id="formularioProducto">
-        <input type="text" name="id" placeholder="ID del producto">
-        <input type="text" name="nombre" placeholder="Nombre del producto">
-        <input type="text" name="precio" placeholder="Precio del producto">
-        <input type="text" name="visual" placeholder="Visual del producto">
-        <button type="submit">Guardar Producto</button>
-    </form>
+    
 
 </body>
 </html>

@@ -29,7 +29,6 @@ addEventListener('DOMContentLoaded', function() {
 });
 
 function crearTabla(tabla, productos = []){
-    //tabla.setAttribute("border", 2);
     // Crear una fila de encabezado
     const filaEncabezado = tabla.insertRow(0);
 
@@ -56,5 +55,5 @@ function mayusculaPrimeraLetra(texto) {
     return texto.charAt(0).toUpperCase() + texto.slice(1);
 }
 
-
+//Hacer edición y bajas de los productos
 
