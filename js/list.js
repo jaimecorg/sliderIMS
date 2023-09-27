@@ -8,9 +8,13 @@ addEventListener('DOMContentLoaded', function() {
             let propiedades = [];
 
             if(data[0] != undefined){
-                for (const property in data[0]) {
+                for (let property in data[0]) {
                     propiedades.push(property);
                 }
+
+                //Apartados de eliminar y editar de la tabla
+                propiedades.push("-");
+                propiedades.push("-")
                 
                 crearTabla(tabla, propiedades);
             }
@@ -18,7 +22,7 @@ addEventListener('DOMContentLoaded', function() {
             data.forEach(product => {
                 let datosProductos = [];
 
-                for (const property in product) {
+                for (let property in product) {
                     datosProductos.push(product[property]);
                 }
 
@@ -30,11 +34,11 @@ addEventListener('DOMContentLoaded', function() {
 
 function crearTabla(tabla, productos = []){
     // Crear una fila de encabezado
-    const filaEncabezado = tabla.insertRow(0);
+    let filaEncabezado = tabla.insertRow(0);
 
     // Agregar celdas con los títulos
     productos.forEach((producto, index) => {
-        const celda = filaEncabezado.insertCell(index);
+        let celda = filaEncabezado.insertCell(index);
         celda.textContent = mayusculaPrimeraLetra(producto);
         
     });  
@@ -42,11 +46,11 @@ function crearTabla(tabla, productos = []){
 
 function agregarFilaATabla(tabla, datos = []) {
     // Crear una nueva fila
-    const nuevaFila = tabla.insertRow();
+    let nuevaFila = tabla.insertRow();
 
     // Agregar celdas con los datos
     datos.forEach((dato) => {
-        const celda = nuevaFila.insertCell();
+        let celda = nuevaFila.insertCell();
         celda.textContent = dato;
     });
 }

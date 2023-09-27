@@ -1,12 +1,12 @@
 addEventListener('DOMContentLoaded', function() {
 
     console.log("insertar");
-    const formularioProducto = document.getElementById('formularioProducto');
+    let formularioProducto = document.getElementById('formularioProducto');
 
     formularioProducto.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const datosFormulario = new FormData(formularioProducto);
+        let datosFormulario = new FormData(formularioProducto);
 
         fetch('php/insert.php', {
             method: 'POST',
