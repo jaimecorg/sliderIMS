@@ -43,6 +43,7 @@ table{
     border: 0px;
     background-color: rgba(250, 235, 215, 0.432) ;
     margin: 1em;
+    width: 100%;
 }
 tbody {
     margin: 15px;

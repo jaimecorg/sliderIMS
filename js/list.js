@@ -55,11 +55,10 @@ function agregarFilaATabla(tabla, datos = []) {
     datos.forEach((dato) => {
         let celda = nuevaFila.insertCell();
         celda.textContent = dato;
-        //console.log(dato)
     });
 
-    // Agregar celda con enlace
-    // Agregar botón en el quinto elemento (td)
+    // Agregar celda con botón
+    // Agregar botón en el quinto/sexto elemento 
     let quintoElemento = nuevaFila.querySelector("td:nth-child(5)");
     let sextoElemento = nuevaFila.querySelector("td:nth-child(6)");
 
@@ -68,13 +67,47 @@ function agregarFilaATabla(tabla, datos = []) {
     botonEliminar.textContent = "Eliminar";
     quintoElemento.appendChild(botonEliminar);
 
+    let celdaId = nuevaFila.querySelector("td:nth-child(1)");
+    console.log(celdaId.textContent);
+
+    botonEliminar.addEventListener("click", function(){
+        console.log("borrar")
+
+        eliminarProducto(celdaId.textContent);
+        
+    });
+
     let botonEditar = document.createElement('button');
-    botonEditar.classList.add("editarrProducto");
+    botonEditar.classList.add("editarProducto");
     botonEditar.textContent = "Editar";
-    sextoElemento.appendChild(botonEditar);
-    //botonEliminar.setAttribute(data-product-id, );
-    
+    sextoElemento.appendChild(botonEditar);   
 }
+
+function eliminarProducto(productoId){
+    console.log(productoId)
+
+    if (confirm('¿Estás seguro de que quieres eliminar este producto?')) {
+        fetch(`php/delete.php?id=${productoId}`, {
+            method: 'GET',
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Error HTTP: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            alert(data.message);
+            window.location.href = 'list.html'; // Redirige a index.html
+
+            // Actualizar la lista de productos si es necesario
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+}
+
 
 function mayusculaPrimeraLetra(texto) {
     return texto.charAt(0).toUpperCase() + texto.slice(1);

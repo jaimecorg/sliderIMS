@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     let formularioBaja = document.getElementById('formularioBaja');
 
+    console.log("borrar");
+
     formularioBaja.addEventListener('submit', function(event) {
         event.preventDefault();
 

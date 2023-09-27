@@ -4,25 +4,25 @@
     $password = "root";
     $dbname = "prueba";
 
-    $idBaja = isset($_POST['idBaja']) ? $_POST['idBaja'] : null;
+    $id = $_GET['id'];
 
-    if ($idBaja !== null) {
-        $conn = new mysqli($servername, $username, $password, $dbname);
+    //$idBaja = isset($_POST['idBaja']) ? $_POST['idBaja'] : null;
 
-        if ($conn->connect_error) {
-            die("Conexión fallida: " . $conn->connect_error);
-        }
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-        $sql = "DELETE FROM product WHERE id_producto = $idBaja";
-
-        if ($conn->query($sql) === TRUE) {
-            echo "Producto eliminado correctamente";
-        } else {
-            echo "Error al eliminar el producto: " . $conn->error;
-        }
-
-        $conn->close();
-    } else {
-        echo "Error: El campo ID está vacío.";
+    if ($conn->connect_error) {
+        die("Conexión fallida: " . $conn->connect_error);
     }
+
+    $sql = "DELETE FROM product WHERE id_producto = $id";
+
+    if ($conn->query($sql) === TRUE) {
+        $response = ['message' => 'Producto eliminado correctamente'];
+        echo json_encode($response);
+    } else {
+        $response = ['message' => 'Error al eliminar el producto'];
+        echo json_encode($response);
+    }
+
+    $conn->close();
 ?>
