@@ -3,39 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/insert.js"></script>
+    <script src="js/edit.js"></script>
     <link rel="stylesheet" href="css/styles.css">
-    <title>Insertar</title>
-</head>
+    <title>Editar</title>
+</head> 
 <body>
     <img src="img/portada.png" alt="">
 
     <div class="contenedor">
-        <h1>Insertar</h1>
+        <h1>Editar</h1>
 
         <div class="inicio">
             <a href="index.html">Inicio</a>
         </div>
-    
-        <form id="formularioProducto">
-            <div class="inputForm">
-                <label>ID: </label>
-                <input type="text" name="id" placeholder="ID del producto">
-            </div>
+
+        <form id="formularioEdicion">
+            <input type="hidden" id="idEdicion" name="id">
             <div class="inputForm">
                 <label>Nombre: </label>
-                <input type="text" name="nombre" placeholder="Nombre del producto">            </div>
+                <input type="text" id="nombreEdicion" name="nombre" placeholder="Nombre del producto">
+            </div>
             <div class="inputForm">
                 <label>Precio: </label>
-                <input type="text" name="precio" placeholder="Precio del producto">
+                <input type="text" id="precioEdicion" name="precio" placeholder="Precio del producto">
             </div>
             <div class="inputForm">
                 <label>Visual: </label>
-                <input type="text" name="visual" placeholder="Visual del producto">
+                <input type="text" id="visualEdicion" name="visual" placeholder="Visual del producto">
             </div>
-            
-            <button type="submit">Guardar producto</button>
+            <button type="submit">Guardar Cambios</button>
         </form>
+        
     </div>
 </body>
 </html>

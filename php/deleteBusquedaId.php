@@ -1,3 +1,5 @@
+<!-- Borrado introduciendo el id -->
+
 <?php
     $servername = "localhost";
     $username = "root";

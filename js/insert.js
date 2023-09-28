@@ -15,7 +15,7 @@ addEventListener('DOMContentLoaded', function() {
         .then(response => response.text())
         .then(data => {
             alert(data); // Muestra el mensaje del servidor
-            window.location.href = 'index.html'; // Redirige a index.html
+            window.location.href = 'list.html'; // Redirige a index.html
         })
         .catch(error => console.error('Error:', error));
     });

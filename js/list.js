@@ -14,7 +14,7 @@ addEventListener('DOMContentLoaded', function() {
 
                 //Apartados de eliminar y editar de la tabla
                 propiedades.push("");
-                propiedades.push("")
+                propiedades.push("");
                 
                 crearTabla(tabla, propiedades);
             }
@@ -33,7 +33,6 @@ addEventListener('DOMContentLoaded', function() {
             });
         })
         .catch(error => console.error('Error:', error)); // Captura y maneja errores
-
 });
 
 function crearTabla(tabla, productos = []){
@@ -68,24 +67,19 @@ function agregarFilaATabla(tabla, datos = []) {
     quintoElemento.appendChild(botonEliminar);
 
     let celdaId = nuevaFila.querySelector("td:nth-child(1)");
-    console.log(celdaId.textContent);
 
     botonEliminar.addEventListener("click", function(){
-        console.log("borrar")
-
         eliminarProducto(celdaId.textContent);
-        
     });
 
-    let botonEditar = document.createElement('button');
-    botonEditar.classList.add("editarProducto");
-    botonEditar.textContent = "Editar";
-    sextoElemento.appendChild(botonEditar);   
+    // Crear enlace
+    let enlaceEditar = document.createElement('a');
+    enlaceEditar.href = `edit.html?id=${celdaId.textContent}`; // Reemplaza idProducto con el ID real
+    enlaceEditar.textContent = "Editar Producto";
+    sextoElemento.appendChild(enlaceEditar);
 }
 
 function eliminarProducto(productoId){
-    console.log(productoId)
-
     if (confirm('¿Estás seguro de que quieres eliminar este producto?')) {
         fetch(`php/delete.php?id=${productoId}`, {
             method: 'GET',
@@ -99,8 +93,6 @@ function eliminarProducto(productoId){
         .then(data => {
             alert(data.message);
             window.location.href = 'list.html'; // Redirige a index.html
-
-            // Actualizar la lista de productos si es necesario
         })
         .catch(error => {
             console.error('Error:', error);
@@ -108,10 +100,7 @@ function eliminarProducto(productoId){
     }
 }
 
-
 function mayusculaPrimeraLetra(texto) {
     return texto.charAt(0).toUpperCase() + texto.slice(1);
 }
-
-//Hacer edición y bajas de los productos
 
