@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Visual</title>
+</head>
+<body>
+    <img src="img/portada.png" alt="">
+
+    <div class="contendedor">
+        <h1>Visual</h1>
+
+        <a href="index.html">Inicio</a>
+    
+        <div id="contendorVisual">
+            <form  action="php/uploadFile.php" method="post" enctype="multipart/form-data">
+                <label for="fileTest">Selecciona una imagen/vídeo:</label>
+                <input id="fileTest" name="fileTest" type="file">
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
