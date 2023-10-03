@@ -1,11 +1,6 @@
     - Hacer edición
     - Añadir checkbox para elegir qué productos se muestran
-    - Horarios en los que se van a mostrar los productos
-
-    - Cuando se inserte un producto que salga una pantalla 
-      para elegir la imagen del archivo (input type=file)   Insertar las imágenes en un apartado aparte y meterlas en una carpeta
-
-
+    
 <div id="uploader">
     <p>Your browser doesn't have Flash, Silverlight or HTML5 support.</p>
 </div>
@@ -51,6 +46,5 @@ $(function() {
 });
 </script>
 
-Mirar datatable
-
-Corregir edición
+-Mirar datatable
+-Corregir edición

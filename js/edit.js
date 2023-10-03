@@ -2,13 +2,15 @@ addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
     const idProducto = urlParams.get('id');
 
-    console.log("editar")
+    let formularioProducto;
+    
     cargarDatosEnFormulario(idProducto);
     
     document.getElementById('formularioEdicion').addEventListener('submit', function(event) {
+        console.log("editarrr")
         event.preventDefault();
     
-        let datosFormulario = new FormData(this);
+        let datosFormulario = new FormData(formularioProducto);
     
         fetch('php/edit.php', {
             method: 'POST',
@@ -16,8 +18,6 @@ addEventListener('DOMContentLoaded', function() {
         })
         .then(response => response.json())
         .then(data => {
-            console.log(response)
-
             alert(data.message);
             window.location.href = 'list.html'; // Redirige a list.html
         })
@@ -30,17 +30,21 @@ function cargarDatosEnFormulario(idProducto) {
     fetch(`php/mostrarDatos.php?id=${idProducto}`, {
         method: 'GET',
     })
-    .then(response => response.json())
+    .then(response => response.json()) 
     .then(data => {
+        console.log(data)
+
         // Verificar si se obtuvo una respuesta exitosa
         if (data.success) {
             // Rellenar los campos del formulario de edición con los datos del producto
             document.getElementById('idEdicion').value = data.producto.id_producto;
             document.getElementById('nombreEdicion').value = data.producto.nombre;
-            document.getElementById('precioEdicion').value = data.producto.precio;
+            /* document.getElementById('precioEdicion').value = data.producto.precio;
             document.getElementById('visualEdicion').value = data.producto.visual;
             document.getElementById('horaInicioEdicion').value = data.producto.fechaInicio;
-            document.getElementById('horaFinalEdicion').value = data.producto.fechaFinal;
+            document.getElementById('horaFinalEdicion').value = data.producto.fechaFinal; */
+            formularioProducto = document.getElementById('formularioEdicion'); // Asigna el formulario a la variable
+
         } else {
             alert(data.message);
         }

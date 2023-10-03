@@ -19,11 +19,11 @@
         $row = $result->fetch_assoc();
         $producto = [
             'id' => $row['id_producto'],
-            'nombre' => $row['nombre'],
-            'precio' => $row['precio'],
+            'nombre' => $row['nombre']
+            /* 'precio' => $row['precio'],
             'visual' => $row['visual'],
             'fechaInicio' => $row['fechaInicio'],
-            'fechaFinal' => $row['fechaFinal'],
+            'fechaFinal' => $row['fechaFinal'] */
         ];
         $response = [
             'success' => true,
