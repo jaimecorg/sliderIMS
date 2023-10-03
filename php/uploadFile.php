@@ -24,8 +24,8 @@
     }
 
     //Validamos la extensión del archivo
-    if($file_type != "jpg" && $file_type != "jpeg" && $file_type != "png" && $file_type != "gif" ) {
-        echo "Solo se permiten imágenes tipo JPG, JPEG, PNG & GIF";
+    if($file_type != "jpg" && $file_type != "jpeg" && $file_type != "png" && $file_type != "mp4" ) {
+        echo "Solo se permiten archivos tipo JPG, JPEG, PNG & MP4";
         $validator = 0;
     }
 
