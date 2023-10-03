@@ -58,13 +58,13 @@ function agregarFilaATabla(tabla, datos = []) {
 
     // Agregar celda con botón
     // Agregar botón en el quinto/sexto elemento 
-    let quintoElemento = nuevaFila.querySelector("td:nth-child(5)");
-    let sextoElemento = nuevaFila.querySelector("td:nth-child(6)");
+    let elementoEliminar = nuevaFila.querySelector("td:nth-child(7)");
+    let elementoEditar = nuevaFila.querySelector("td:nth-child(8)");
 
     let botonEliminar = document.createElement('button');
     botonEliminar.classList.add("eliminarProducto");
     botonEliminar.textContent = "Eliminar";
-    quintoElemento.appendChild(botonEliminar);
+    elementoEliminar.appendChild(botonEliminar);
 
     let celdaId = nuevaFila.querySelector("td:nth-child(1)");
 
@@ -75,8 +75,8 @@ function agregarFilaATabla(tabla, datos = []) {
     // Crear enlace
     let enlaceEditar = document.createElement('a');
     enlaceEditar.href = `edit.html?id=${celdaId.textContent}`; // Reemplaza idProducto con el ID real
-    enlaceEditar.textContent = "Editar Producto";
-    sextoElemento.appendChild(enlaceEditar);
+    enlaceEditar.textContent = "Editar";
+    elementoEditar.appendChild(enlaceEditar);
 }
 
 function eliminarProducto(productoId){

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+addEventListener('DOMContentLoaded', function() {
     let formularioBaja = document.getElementById('formularioBaja');
 
     formularioBaja.addEventListener('submit', function(event) {

@@ -1,5 +1,4 @@
 addEventListener('DOMContentLoaded', function() {
-
     console.log("insertar");
     let formularioProducto = document.getElementById('formularioProducto');
 

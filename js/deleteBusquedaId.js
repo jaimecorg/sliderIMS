@@ -1,6 +1,6 @@
 // Borrado introduciendo el id
 
-document.addEventListener('DOMContentLoaded', function() {
+addEventListener('DOMContentLoaded', function() {
     let formularioBaja = document.getElementById('formularioBaja');
 
     console.log("borrar");

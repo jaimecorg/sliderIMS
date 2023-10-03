@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
     const idProducto = urlParams.get('id');
 
@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(response => response.json())
         .then(data => {
+            console.log(response)
+
             alert(data.message);
             window.location.href = 'list.html'; // Redirige a list.html
         })
@@ -37,6 +39,8 @@ function cargarDatosEnFormulario(idProducto) {
             document.getElementById('nombreEdicion').value = data.producto.nombre;
             document.getElementById('precioEdicion').value = data.producto.precio;
             document.getElementById('visualEdicion').value = data.producto.visual;
+            document.getElementById('horaInicioEdicion').value = data.producto.fechaInicio;
+            document.getElementById('horaFinalEdicion').value = data.producto.fechaFinal;
         } else {
             alert(data.message);
         }

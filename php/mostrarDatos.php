@@ -21,7 +21,9 @@
             'id' => $row['id_producto'],
             'nombre' => $row['nombre'],
             'precio' => $row['precio'],
-            'visual' => $row['visual']
+            'visual' => $row['visual'],
+            'fechaInicio' => $row['fechaInicio'],
+            'fechaFinal' => $row['fechaFinal'],
         ];
         $response = [
             'success' => true,
