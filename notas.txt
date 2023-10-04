@@ -1,5 +1,5 @@
     - Hacer edición
-    - Añadir checkbox para elegir qué productos se muestran
+    - Botón que muestre los productos a la hora que les correponde
     
 <div id="uploader">
     <p>Your browser doesn't have Flash, Silverlight or HTML5 support.</p>

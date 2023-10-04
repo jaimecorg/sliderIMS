@@ -1,0 +1,54 @@
+body {
+    background-image: url('../img/fondo.png');
+    background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija el fondo */
+}
+
+.logo img{
+    width: 20%;
+    height: 150px;
+    border-radius: 20%;
+    margin-right: 79%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border:1px solid white;
+    display: block;
+    background-color: rgba(80, 214, 255, 0.144);
+}
+
+.contenedor{
+    display: flex;
+    color: black;
+    border:1px solid white;
+
+}
+
+.contenedor .imagenProducto{
+    width: 50%;
+    display: block;
+    margin: 2%;
+}
+
+.contenedor .imagenProducto img{
+    width: 100%;
+    display: block;
+}
+
+.contenedor .infoProducto{
+    width: 50%;
+    margin: 2%;
+}
+
+.contenedor .infoProducto .tituloProducto{
+    text-align: center;
+    background-color: rgba(30, 204, 210, 0.562);
+    color: white;
+}
+
+.contenedor .info span{
+    text-align: center;
+    background-color: rgba(30, 204, 210, 0.562);
+    color: white;
+    font-size: 160%;
+}

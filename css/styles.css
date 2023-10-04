@@ -30,7 +30,7 @@ h1{
     margin: 1em 1em;
 }
 
-/* Enlaces  */
+/* Enlaces */
 a{
     text-decoration: none;
     color: white;
@@ -40,7 +40,7 @@ a{
     font-size: 1.2em;
 }
 
-/* Tablas  */
+/* Tablas */
 table{
     border: 0px;
     background-color: rgba(250, 235, 215, 0.432) ;
@@ -56,14 +56,13 @@ tr:first-child{
     font-weight: bold;
     background-color: cadetblue;
     font-size: 1.1em;
-
 }
 td {
     margin: 15px;
     padding: 15px;
 }
 
-/* Formularios  */
+/* Formularios */
 form{
     margin: 1em;
     display: flex;
