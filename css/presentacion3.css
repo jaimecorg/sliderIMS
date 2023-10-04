@@ -1,0 +1,65 @@
+body {
+    background-color: rgb(209, 209, 209);
+}
+
+.logo img{
+    width: 25%;
+    height: 25%;
+    border-radius: 20%;
+    margin-left: 70%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-top: 5%;
+    border:1px solid white;
+    display: block;
+    background-color: rgba(80, 214, 255, 0.144);
+}
+
+.adorno{
+    width: 100%;
+    height: 25%;
+    background-color: cornflowerblue;
+    padding: 10%;
+    display: block;
+    position: absolute;
+    margin-top: 10%;
+}
+
+.contenedor{
+    display: flex;
+    color: black;
+    position: absolute;
+    height: 75%;
+    width: 100%;
+}
+
+.contenedor .imagenProducto{
+    width: 50%;
+    display: block;
+    margin: 2%;
+}
+
+.contenedor .imagenProducto img{
+    width: 100%;
+    display: block;
+    height: 90%;
+}
+
+.contenedor .infoProducto{
+    width: 50%;
+    margin: 2%;
+}
+
+.contenedor .infoProducto .tituloProducto{
+    text-align: center;
+    background-color: rgba(30, 204, 210, 0.562);
+    color: white;
+    margin-top: 30%;
+}
+
+.contenedor .info span{
+    text-align: center;
+    background-color: rgba(30, 204, 210, 0.562);
+    color: white;
+    font-size: 160%;
+}
