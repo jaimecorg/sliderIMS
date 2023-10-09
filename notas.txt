@@ -1,4 +1,3 @@
-    - Hacer edición
     - Botón que muestre los productos a la hora que les correponde
     
 <div id="uploader">
