@@ -10,16 +10,17 @@
     $visual = isset($_POST['visual']) ? $_POST['visual'] : null;
     $fechaInicio = isset($_POST['fechaInicio']) ? $_POST['fechaInicio'] : null;
     $fechaFinal = isset($_POST['fechaFinal']) ? $_POST['fechaFinal'] : null;
+    $descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : null;
 
     // Validar que todos los datos están presentes
-    if ($id !== null && $nombre !== null && $precio !== null && $visual !== null && $fechaInicio !== null && $fechaFinal !== null) {
+    if ($id !== null && $nombre !== null && $precio !== null && $visual !== null && $fechaInicio !== null && $fechaFinal !== null && $descripcion !== null) {
         $conn = new mysqli($servername, $username, $password, $dbname);
 
         if ($conn->connect_error) {
             die("Conexión fallida: " . $conn->connect_error);
         }
 
-        $sql = "INSERT INTO product (id_producto, nombre, precio, visual, fechaInicio, fechaFinal) VALUES ($id, '$nombre', $precio, '$visual', '$fechaInicio', '$fechaFinal')";
+        $sql = "INSERT INTO product (id_producto, nombre, precio, visual, fechaInicio, fechaFinal, descripcion) VALUES ($id, '$nombre', $precio, '$visual', '$fechaInicio', '$fechaFinal', '$descripcion')";
 
         if ($conn->query($sql) === TRUE) {
             echo "Producto insertado correctamente";
