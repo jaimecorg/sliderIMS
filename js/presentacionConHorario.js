@@ -8,7 +8,6 @@ addEventListener('DOMContentLoaded', function() {
         .then(data => { // Manipula los datos JSON
             
             data.forEach(product => {
-
                 datosProductos = [];
 
                 for (let property in product) {
@@ -18,14 +17,32 @@ addEventListener('DOMContentLoaded', function() {
 
             let contador = 0;
 
+            /* mostrarProducto();
+            function mostrarProducto(){
+            
+                if (contador < data.length) {
+                    let product = data[contador];
+
+                    if (comprobarHorario(product)) {
+                        setTimeout(() => {
+                            asignarProducto(product);
+                          }, 1000);
+                    }
+
+                    contador++;
+                } else {
+                    contador = 0;
+                    //clearInterval(interval);
+                }
+            } */
+
             const interval = setInterval(() => {
                 if (contador < data.length) {
                     let product = data[contador];
 
-                    if(comprobarHorario(product)){
+                    if (comprobarHorario(product)) {
                         asignarProducto(product);
                     }
-                    //comprobarHorario(product);
 
                     contador++;
                 } else {
@@ -34,23 +51,26 @@ addEventListener('DOMContentLoaded', function() {
                 }
             }, 2000);
         })
-        .catch(error => console.error('Error:', error)); // Captura y maneja errores
+        .catch(error => console.error('Error:', error) // Captura y maneja errores
+    );
 });
 
+//Comprueba si la hora actual está comprendida entre la hora inicial y final del 
+//producto para así mostrarse o no
 function comprobarHorario(producto){
     let hora = getHora();
     let horaInicio = new Date(`2000-01-01T${producto['fechaInicio']}`);
     let horaFinal = new Date(`2000-01-01T${producto['fechaFinal']}`);
     let horaActual = new Date(`2000-01-01T${hora}`);
     let position = false
-    console.log(hora)
-    //console.log(producto['fechaInicio'].split(":"), producto['fechaFinal']);
 
-    if(horaActual > horaInicio && horaActual < horaFinal){
+
+    if (horaActual > horaInicio && horaActual < horaFinal) {
         position = true;
         console.log("correcto");
-    }else{
-        if(horaActual < horaInicio || horaActual > horaFinal){
+
+    } else {
+        if (horaActual < horaInicio || horaActual > horaFinal) {
             position = false;
             console.log("error");
         }
@@ -77,18 +97,17 @@ function getHora(){
     let fecha = new Date();
     let horas = fecha.getHours();
     let minutos = fecha.getMinutes();
-    //let segundos = fecha.getSeconds();
 
     //Si la hora es menos a 10 segundos se le añade un 0 delante
-    if(horas < 10){
+    if (horas < 10) {
         horas = '0' + horas;
     }
 
-    if(minutos < 10){
+    if (minutos < 10) {
         minutos = '0' + minutos;
     }
+
     let hora = horas + ":" + minutos + ":" + "00"
-    //console.log(hora)
 
     return hora; 
 }

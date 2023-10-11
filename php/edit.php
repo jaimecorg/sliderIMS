@@ -4,12 +4,12 @@
     $password = "root";
     $dbname = "prueba";
 
-    $id = $_POST['id'];
+    $id = $_POST['id_producto'];
     $nombre = $_POST['nombre'];
-/*     $precio = $_POST['precio'];
+    $precio = $_POST['precio'];
     $visual = $_POST['visual'];
     $fechaInicio = $_POST['fechaInicio'];
-    $fechaFinal = $_POST['fechaFinal']; */
+    $fechaFinal = $_POST['fechaFinal'];
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -17,17 +17,17 @@
         die("Conexión fallida: " . $conn->connect_error);
     }
 
-    $sql = "UPDATE product SET nombre='$nombre'/* , precio=$precio, visual='$visual', fechaInicio='$fechaInicio', fechaFinal='$fechaFinal' */ WHERE id_producto=$id";
+    $sql = "UPDATE product SET nombre='$nombre', precio=$precio, visual='$visual', fechaInicio='$fechaInicio', fechaFinal='$fechaFinal' WHERE id_producto=$id";
 
     if ($conn->query($sql) === TRUE) {
-        $response = ['success' => true, 'message' => 'Producto actualizado correctamente'];
+        echo "Producto actualizado correctamente";
     } else {
-        $response = ['success' => false, 'message' => 'Error al actualizar el producto: ' . $conn->error];
+        echo "Error al actualizar el producto: " . $conn->error;
     }
 
     $conn->close();
 
-    echo json_encode($response);
+    //echo json_encode($response);
 ?>
 
 

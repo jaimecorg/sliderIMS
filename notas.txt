@@ -1,9 +1,9 @@
-    - Botón que muestre los productos a la hora que les correponde
     - Función que compruebe la hora y se ejecute cada segundo, cada vez que se 
     ejecute que llame a la función comprobar que compruebe a que hora inicia 
     y finaliza el horario del producto. Una vez comprobado mostrar o no en pantalla.
-    -Que se reproduzca con horario sea opcional, si no se da la opción que se reproduzcan
-    todos los productos
+    -Mirar datatable
+    -Corregir edición
+
 
 <div id="uploader">
     <p>Your browser doesn't have Flash, Silverlight or HTML5 support.</p>
@@ -49,5 +49,3 @@
     });
 </script>
 
--Mirar datatable
--Corregir edición
