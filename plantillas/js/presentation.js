@@ -3,7 +3,7 @@ addEventListener('DOMContentLoaded', function() {
     getHora();
     datosProductos = [];
 
-    fetch('list.php') // Hace una petición GET al archivo list.php
+    fetch('../php/list.php') // Hace una petición GET al archivo list.php
         .then(response => response.json()) // Parsea la respuesta como JSON
         .then(data => { // Manipula los datos JSON
             
@@ -28,21 +28,6 @@ addEventListener('DOMContentLoaded', function() {
                     //clearInterval(interval);
                 }
             }, 2000);
-
-            /*
-                data.forEach(product => {
-
-                    datosProductos = [];
-
-                    for (let property in product) {
-                        datosProductos.push(product[property]);
-                    }
-
-                    let contador;
-
-                    contador = setTimeout(() => asignarProducto(datosProductos), 2000);
-                });
-            */
         })
         .catch(error => console.error('Error:', error)); // Captura y maneja errores
 });
@@ -55,7 +40,9 @@ function asignarProducto(datosProductos){
     let precio = document.getElementById("precio");
 
     //imagen.src = datosProductos['visual']
-    document.body.style.backgroundImage = 'url(' + datosProductos['visual'] + ')';
+    //document.body.style.backgroundImage = 'url(' + datosProductos['visual'] + ')';
+    document.body.style.backgroundImage = 'url("../../' + datosProductos['visual'] + '")';
+
     document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundRepeat = 'no-repeat';
     document.body.style.backgroundAttachment = 'fixed';
