@@ -7,7 +7,6 @@ addEventListener('DOMContentLoaded', function() {
     cargarDatosEnFormulario(idProducto);
     
     formularioProducto.addEventListener('submit', function(event) {
-        console.log("editarrr")
         event.preventDefault();
     
         let datosFormulario = new FormData(formularioProducto);
@@ -34,8 +33,6 @@ function cargarDatosEnFormulario(idProducto) {
     })
     .then(response => response.json()) 
     .then(data => {
-        console.log(data);
-
         // Verificar si se obtuvo una respuesta exitosa
         if (data.success) {
             // Rellenar los campos del formulario de edición con los datos del producto

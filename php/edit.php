@@ -10,6 +10,8 @@
     $visual = $_POST['visual'];
     $fechaInicio = $_POST['fechaInicio'];
     $fechaFinal = $_POST['fechaFinal'];
+    $descripcion = $_POST['descripcion'];
+
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -17,7 +19,7 @@
         die("Conexión fallida: " . $conn->connect_error);
     }
 
-    $sql = "UPDATE product SET nombre='$nombre', precio=$precio, visual='$visual', fechaInicio='$fechaInicio', fechaFinal='$fechaFinal' WHERE id_producto=$id";
+    $sql = "UPDATE product SET nombre='$nombre', precio=$precio, visual='$visual', fechaInicio='$fechaInicio', fechaFinal='$fechaFinal', descripcion='$descripcion' WHERE id_producto=$id";
 
     if ($conn->query($sql) === TRUE) {
         echo "Producto actualizado correctamente";

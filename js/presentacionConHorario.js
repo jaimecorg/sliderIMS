@@ -59,11 +59,11 @@ addEventListener('DOMContentLoaded', function() {
 //producto para así mostrarse o no
 function comprobarHorario(producto){
     let hora = getHora();
+    //Le ponemos formato Date para facilitar la comparación entre las fechas
     let horaInicio = new Date(`2000-01-01T${producto['fechaInicio']}`);
     let horaFinal = new Date(`2000-01-01T${producto['fechaFinal']}`);
     let horaActual = new Date(`2000-01-01T${hora}`);
     let position = false
-
 
     if (horaActual > horaInicio && horaActual < horaFinal) {
         position = true;
