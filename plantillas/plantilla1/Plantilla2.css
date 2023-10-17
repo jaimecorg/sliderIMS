@@ -24,7 +24,7 @@ body{
   /* margin: 2em -1em 0 -4em; */
   position: fixed;
   top: 10px; /* Ajusta la distancia desde el borde inferior */
-  left: 10px; /* Ajusta la distancia desde el borde derecho */
+  left: 10px; /* Ajusta la distancia desde el borde izquierdo */
 }
 
 .u-section-1-1 .u-container-layout-1 {
