@@ -1,6 +1,10 @@
+@import url("https://fonts.google.com/?stroke=Serif");
+
 body{
   background-color: black;
-  padding: 1em;
+  position: fixed;
+  width: 100%;
+  height: 100%;
 
 }
 .section{
@@ -9,33 +13,40 @@ body{
 }
 
 #contenedorImagen{
-  width: 80%;
-  min-height: 100%;
+  width: 70%;
 }
 
 .contenedorDatos{
   padding: 20px;
-  width: 20%;
-  min-height: 100%;
-  background-color: rgba(128, 128, 128, 0.548);
-
+  width: 30%;
+  background-color: rgba(128, 128, 128, 0.884);
+  height: 100vh;  
+  
   #titulo{
+    text-transform: uppercase;
+    font-size: 4em;
+    font-family: 'Roboto', sans-serif;
   }
 
   #descripcion{
+    font-family: 'Onest', sans-serif;
+    font-size: 2em;
   }
 
-  
+  #precio{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+  }
 }
 
 h4{
   padding-right: 50px;
 }
-.contenedorDatos img{
-  width: 100%;
-  height: 25%;
-  bottom: 10px;
-  padding: 1%;
-  margin-top: 100%;
-}
 
+.contenedorDatos img{
+  position: fixed;
+  bottom: 0;
+  right: 2em;
+  width: 25%;
+  height: 25%;
+}
