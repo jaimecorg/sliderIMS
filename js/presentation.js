@@ -3,7 +3,7 @@ addEventListener('DOMContentLoaded', function() {
     getHora();
     datosProductos = [];
 
-    fetch('list.php') // Hace una petición GET al archivo list.php
+    fetch('php/list.php') // Hace una petición GET al archivo list.php
         .then(response => response.json()) // Parsea la respuesta como JSON
         .then(data => { // Manipula los datos JSON
             
@@ -54,12 +54,7 @@ function asignarProducto(datosProductos){
     let descripcion = document.getElementById("descripcion");
     let precio = document.getElementById("precio");
 
-    //imagen.src = datosProductos['visual']
-    document.body.style.backgroundImage = 'url(' + datosProductos['visual'] + ')';
-    document.body.style.backgroundSize = 'cover';
-    document.body.style.backgroundRepeat = 'no-repeat';
-    document.body.style.backgroundAttachment = 'fixed';
-
+    imagen.src = datosProductos['visual']
     titulo.textContent = datosProductos['nombre'];
     descripcion.textContent = datosProductos['descripcion'];
     precio.textContent = datosProductos['precio'];

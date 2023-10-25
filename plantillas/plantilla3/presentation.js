@@ -2,7 +2,6 @@ addEventListener('DOMContentLoaded', function() {
 
     getHora();
     datosProductos = [];
-    console.log("der");
 
     fetch('../php/list.php') // Hace una petición GET al archivo list.php
         .then(response => response.json()) // Parsea la respuesta como JSON

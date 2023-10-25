@@ -8,6 +8,7 @@ addEventListener('DOMContentLoaded', function() {
         .then(data => { // Manipula los datos JSON
             
             data.forEach(product => {
+
                 datosProductos = [];
 
                 for (let property in product) {
@@ -33,18 +34,18 @@ addEventListener('DOMContentLoaded', function() {
 
 //Asigna los datos del producto a la plantilla
 function asignarProducto(datosProductos){
-    //let imagen = document.querySelector(".imagenProducto img");
+    let imagen = document.querySelector("#contenedorImagen img");
     let titulo = document.getElementById("titulo");
     let descripcion = document.getElementById("descripcion");
     let precio = document.getElementById("precio");
 
-    //imagen.src = datosProductos['visual']
+    //imagen.src = "../../" + datosProductos['visual'];
     //document.body.style.backgroundImage = 'url(' + datosProductos['visual'] + ')';
     let claseImagen = document.getElementById("contenedorImagen");
     claseImagen.style.backgroundImage = 'url("../../' + datosProductos['visual'] + '")';
 
     claseImagen.style.backgroundSize = 'cover';
-    claseImagen.style.backgroundRepeat = 'no-repeat';
+    claseImagen.style.backgroundRepeat = 'no-repeat'; 
     //claseImagen.style.backgroundAttachment = 'fixed';
 
     titulo.textContent = datosProductos['nombre'];

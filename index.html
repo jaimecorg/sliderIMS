@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>IMS</title>
-</head>
-<body>
-    <img src="img/portada.png" alt="">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>IMS</title>
+    </head>
+    <body>
+        <img src="img/portada.png" alt="">
 
-    <div class="contendedor">
-        <h1>Slider</h1>
+        <div class="contendedor">
+            <h1>Slider</h1>
 
-        <a href="insert.html">Insertar producto</a>
-        <a href="list.html">Listar productos</a>
-        <a href="delete.html">Eliminar producto</a>
-        <a href="visual.html">Insertar visual</a>
-        <a href="php/listVisual.php">Listar visual</a>
-        <a href="presentation.html">Presentación</a>
-        <a href="presentationConHorario.html">Presentación con horario</a>
+            <a href="insert.html">Insertar producto</a>
+            <a href="list.html">Listar productos</a>
+            <a href="delete.html">Eliminar producto</a>
+            <a href="visual.html">Insertar visual</a>
+            <a href="php/listVisual.php">Listar visual</a>
+            <a href="presentation.html">Presentación</a>
+            <a href="presentationConHorario.html">Presentación con horario</a>
+            
+            <p>Presentaciones: </p>
+            <div class="selector">
+                <select name="presentaciones" id="presentaciones" onchange="redireccionar()">
+                    <option disabled selected>Elige una presentación</option>
+                    <option value="plantillas/plantilla1/Plantilla2.html">Primera</option>
+                    <option value="plantillas/plantilla2/Plantilla3.html">Segunda</option>
+                    <option value="plantillas/plantilla3/Plantilla4.html">Tercera</option>
+                    <option value="plantillas/plantilla4/index.html">Cuarta</option>
+                </select>
+            </div>
+        </div>
 
-    </div>
-</body>
+        <script>
+            function redireccionar() {
+                const seleccion = document.getElementById('presentaciones').value;
+
+                if(seleccion){
+                    window.location.href = seleccion;
+                }
+            }
+        </script> 
+    </body>
 </html>
+

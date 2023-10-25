@@ -14,12 +14,13 @@ body{
 
 #contenedorImagen{
   width: 70%;
+  background-position: center; /* Se ve el centro de la imagen*/
 }
 
 .contenedorDatos{
   padding: 20px;
   width: 30%;
-  background-color: rgba(128, 128, 128, 0.884);
+  background-color: rgba(128, 128, 128, 0.541);
   height: 100vh;  
   
   #titulo{
