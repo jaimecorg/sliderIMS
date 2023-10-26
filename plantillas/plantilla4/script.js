@@ -42,8 +42,8 @@ function asignarProducto(datosProductos){
     //imagen.src = "../../" + datosProductos['visual'];
     //document.body.style.backgroundImage = 'url(' + datosProductos['visual'] + ')';
     let claseImagen = document.getElementById("contenedorImagen");
+      
     claseImagen.style.backgroundImage = 'url("../../' + datosProductos['visual'] + '")';
-
     claseImagen.style.backgroundSize = 'cover';
     claseImagen.style.backgroundRepeat = 'no-repeat'; 
     //claseImagen.style.backgroundAttachment = 'fixed';
