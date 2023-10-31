@@ -18,10 +18,6 @@
         </div>
     
         <form id="formularioProducto">
-            <!-- <div class="inputForm">
-                <label>ID: </label>
-                <input type="text" name="id" placeholder="ID del producto">
-            </div> -->
             <div class="inputForm">
                 <label>Nombre: </label>
                 <input type="text" name="nombre" placeholder="Nombre del producto">            
@@ -36,7 +32,7 @@
                 <input type="text" name="visual" placeholder="Visual del producto">
             </div>
 
-            <div class="inputForm">
+            <!-- <div class="inputForm">
                 <label>Hora inicio: </label>
                 <input type="text" name="fechaInicio" placeholder="Fecha inicio proyección">
             </div>
@@ -44,13 +40,25 @@
             <div class="inputForm">
                 <label>Hora final: </label>
                 <input type="text" name="fechaFinal" placeholder="Fecha final proyección">
-            </div>
+            </div> -->
 
             <div class="inputForm">
                 <label>Descripción: </label>
-                <input type="text" name="descripcion" placeholder="Descripción">
+                <textarea name="descripcion" id="" cols="30" rows="10" placeholder="Descripción"></textarea>
             </div>
             
+            <div class="inputForm">
+                <label for="ice-cream-choice">Elije una visual:</label>
+                <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+
+                <datalist id="ice-cream-flavors">
+                    <option value="Chocolate"></option>
+                    <option value="Coconut"></option>
+                    <option value="Mint"></option>
+                    <option value="Strawberry"></option>
+                    <option value="Vanilla"></option>
+                </datalist>
+            </div>
             <button type="submit">Guardar producto</button>
         </form>
     </div>

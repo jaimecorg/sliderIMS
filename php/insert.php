@@ -13,7 +13,9 @@
     $descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : null;
 
     // Validar que todos los datos están presentes
-    if ($nombre !== null && $precio !== null && $visual !== null && $fechaInicio !== null && $fechaFinal !== null && $descripcion !== null) {
+    //    if ($nombre !== null && $precio !== null && $visual !== null && $fechaInicio !== null && $fechaFinal !== null && $descripcion !== null) {
+
+    if ($nombre !== null && $precio !== null && $visual !== null && $descripcion !== null) {
         $conn = new mysqli($servername, $username, $password, $dbname);
 
         if ($conn->connect_error) {

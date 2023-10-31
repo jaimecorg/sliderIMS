@@ -40,8 +40,8 @@ function cargarDatosEnFormulario(idProducto) {
             document.getElementById('nombreEdicion').value = data.producto.nombre;
             document.getElementById('precioEdicion').value = data.producto.precio;
             document.getElementById('visualEdicion').value = data.producto.visual;
-            document.getElementById('horaInicioEdicion').value = data.producto.fechaInicio;
-            document.getElementById('horaFinalEdicion').value = data.producto.fechaFinal;
+            // document.getElementById('horaInicioEdicion').value = data.producto.fechaInicio;
+            // document.getElementById('horaFinalEdicion').value = data.producto.fechaFinal;
             document.getElementById('descripcionEdicion').value = data.producto.descripcion;
             formularioProducto = document.getElementById('formularioEdicion'); // Asigna el formulario a la variable
         } else {

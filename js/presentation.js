@@ -49,12 +49,12 @@ addEventListener('DOMContentLoaded', function() {
 
 //Asigna los datos del producto a la plantilla
 function asignarProducto(datosProductos){
-    let imagen = document.querySelector(".imagenProducto img")
+    let imagen = document.querySelector(".imagenProducto img");
     let titulo = document.getElementById("titulo");
     let descripcion = document.getElementById("descripcion");
     let precio = document.getElementById("precio");
 
-    imagen.src = datosProductos['visual']
+    imagen.src = "img/" + datosProductos['visual']; //Ojo recién cambiado
     titulo.textContent = datosProductos['nombre'];
     descripcion.textContent = datosProductos['descripcion'];
     precio.textContent = datosProductos['precio'];

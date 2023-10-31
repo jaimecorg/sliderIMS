@@ -3,11 +3,10 @@
     y finaliza el horario del producto. Una vez comprobado mostrar o no en pantalla.
     -Mirar datatable
     - Añadir duración video
-    - Id autoincrementable
     - List para elegir imagen en el insert
-    - Descripción más grande
     - Poder meter visual desde insert
-
+    - Datalist
+    - Apañar lo de las imágenes
 
 <div id="uploader">
     <p>Your browser doesn't have Flash, Silverlight or HTML5 support.</p>
