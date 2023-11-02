@@ -27,10 +27,10 @@
                 <input type="text" name="precio" placeholder="Precio del producto">
             </div>
             
-            <div class="inputForm">
+            <!-- <div class="inputForm">
                 <label>Visual: </label>
                 <input type="text" name="visual" placeholder="Visual del producto">
-            </div>
+            </div> -->
 
             <!-- <div class="inputForm">
                 <label>Hora inicio: </label>
@@ -48,17 +48,34 @@
             </div>
             
             <div class="inputForm">
-                <label for="ice-cream-choice">Elije una visual:</label>
-                <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+                <label for="visual">Elije una visual:</label>
+                <input list="visualData" id="visualDatos" name="visualData" />
 
-                <datalist id="ice-cream-flavors">
-                    <option value="Chocolate"></option>
-                    <option value="Coconut"></option>
-                    <option value="Mint"></option>
-                    <option value="Strawberry"></option>
-                    <option value="Vanilla"></option>
-                </datalist>
+                <datalist id="visualData"></datalist>
             </div>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Hacer una petición al servidor para obtener la lista de opciones
+                    fetch('php/insertPHP.php')
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data);
+
+                            // Convertir el objeto a un array de valores
+                            const dataArray = Object.values(data);
+
+                            dataArray.forEach(option => {
+                                const optionElement = document.createElement('option');
+                                optionElement.value = option;
+                                visualData.appendChild(optionElement);
+                            });
+                        })
+                        .catch(error => console.error('Error:', error));
+                });
+
+            </script>
+
             <button type="submit">Guardar producto</button>
         </form>
     </div>

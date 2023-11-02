@@ -34,7 +34,7 @@ addEventListener('DOMContentLoaded', function() {
 
 //Asigna los datos del producto a la plantilla
 function asignarProducto(datosProductos){
-    let imagen = document.querySelector(".imagenProducto img")
+    let imagen = document.querySelector(".imagenProducto img");
     let titulo = document.getElementById("titulo");
     let descripcion = document.getElementById("descripcion");
     let precio = document.getElementById("precio");
@@ -59,7 +59,7 @@ function getHora(){
     let minutos = fecha.getMinutes();
     //let segundos = fecha.getSeconds();
 
-    let hora = horas + ":" + minutos + ":" + "00"
+    let hora = horas + ":" + minutos + ":" + "00";
     //console.log(hora)
 
     return hora; 

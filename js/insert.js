@@ -8,7 +8,7 @@ addEventListener('DOMContentLoaded', function() {
 
         fetch('php/insert.php', {
             method: 'POST',
-            body: datosFormulario
+            body: datosFormulario 
         })
         .then(response => response.text())
         .then(data => {

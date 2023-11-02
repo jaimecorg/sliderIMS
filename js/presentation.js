@@ -67,7 +67,7 @@ function getHora(){
     let minutos = fecha.getMinutes();
     //let segundos = fecha.getSeconds();
 
-    let hora = horas + ":" + minutos + ":" + "00"
+    let hora = horas + ":" + minutos + ":" + "00";
     //console.log(hora)
 
     return hora; 

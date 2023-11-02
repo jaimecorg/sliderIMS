@@ -7,7 +7,7 @@
     $id = isset($_POST['id']) ? $_POST['id'] : null;
     $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : null;
     $precio = isset($_POST['precio']) ? $_POST['precio'] : null;
-    $visual = isset($_POST['visual']) ? $_POST['visual'] : null;
+    $visual = isset($_POST['visualData']) ? $_POST['visualData'] : null;
     $fechaInicio = isset($_POST['fechaInicio']) ? $_POST['fechaInicio'] : null;
     $fechaFinal = isset($_POST['fechaFinal']) ? $_POST['fechaFinal'] : null;
     $descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : null;
