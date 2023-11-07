@@ -50,7 +50,6 @@ function asignarProducto(datosProductos){
     if(datosProductos['duracion'] != 0){
         video.classList.remove("ocultar"); //Oculta o muestra el elemento video
         video.src = "img/" + datosProductos['visual'];
-        console.log(datosProductos['duracion'])
         clearInterval(interval);
         setTimeout(function(){
             mostrar();
