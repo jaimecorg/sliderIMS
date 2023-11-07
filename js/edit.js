@@ -43,6 +43,7 @@ function cargarDatosEnFormulario(idProducto) {
             // document.getElementById('horaInicioEdicion').value = data.producto.fechaInicio;
             // document.getElementById('horaFinalEdicion').value = data.producto.fechaFinal;
             document.getElementById('descripcionEdicion').value = data.producto.descripcion;
+            document.getElementById('duracionEdicion').value = data.producto.duracion;
             formularioProducto = document.getElementById('formularioEdicion'); // Asigna el formulario a la variable
         } else {
             alert(data.message);

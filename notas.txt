@@ -2,6 +2,4 @@
     ejecute que llame a la función comprobar que compruebe a que hora inicia 
     y finaliza el horario del producto. Una vez comprobado mostrar o no en pantalla.
     -Mirar datatable
-    - Añadir duración video/preguntar formato de visualización
-    - Poder meter visual desde insert
     - Modificar insert y edit para duración
