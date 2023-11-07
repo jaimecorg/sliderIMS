@@ -36,7 +36,7 @@ function asignarProducto(datosProductos){
 
     console.log(imagen);
 
-    imagen.style.backgroundImage = 'url("../../' + datosProductos['visual'] + '")';
+    imagen.style.backgroundImage = 'url("../../img/' + datosProductos['visual'] + '")';
     imagen.style.backgroundSize = 'cover';
     imagen.style.backgroundRepeat = 'no-repeat'; 
 }

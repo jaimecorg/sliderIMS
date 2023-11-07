@@ -1,3 +1,5 @@
+//Sin video
+
 addEventListener('DOMContentLoaded', function() {
 
     getHora();
@@ -21,6 +23,7 @@ addEventListener('DOMContentLoaded', function() {
             const interval = setInterval(() => {
                 if (contador < data.length) {
                     let product = data[contador];
+
                     asignarProducto(product);
                     contador++;
                 } else {
@@ -39,17 +42,17 @@ function asignarProducto(datosProductos){
     let descripcion = document.getElementById("descripcion");
     let precio = document.getElementById("precio");
 
-    //imagen.src = datosProductos['visual']
-    //document.body.style.backgroundImage = 'url(' + datosProductos['visual'] + ')';
-    document.body.style.backgroundImage = 'url("../../img/' + datosProductos['visual'] + '")';
+    if(datosProductos['duracion'] == 0){
+        document.body.style.backgroundImage = 'url("../../img/' + datosProductos['visual'] + '")';
 
-    document.body.style.backgroundSize = 'cover';
-    document.body.style.backgroundRepeat = 'no-repeat';
-    document.body.style.backgroundAttachment = 'fixed';
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundRepeat = 'no-repeat';
+        document.body.style.backgroundAttachment = 'fixed';
 
-    titulo.textContent = datosProductos['nombre'];
-    descripcion.textContent = datosProductos['descripcion'];
-    precio.textContent = datosProductos['precio'];
+        titulo.textContent = datosProductos['nombre'];
+        descripcion.textContent = datosProductos['descripcion'];
+        precio.textContent = datosProductos['precio'];
+    } 
 }
 
 //Función que muestra la hora

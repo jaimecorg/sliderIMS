@@ -58,8 +58,8 @@ function agregarFilaATabla(tabla, datos = []) {
 
     // Agregar celda con botón
     // Agregar botón en el quinto/sexto elemento 
-    let elementoEliminar = nuevaFila.querySelector("td:nth-child(8)");
-    let elementoEditar = nuevaFila.querySelector("td:nth-child(9)");
+    let elementoEliminar = nuevaFila.querySelector("td:nth-child(9)");
+    let elementoEditar = nuevaFila.querySelector("td:nth-child(10)");
 
     let botonEliminar = document.createElement('button');
     botonEliminar.classList.add("eliminarProducto");

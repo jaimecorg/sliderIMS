@@ -35,6 +35,11 @@ body {
     display: block;
 }
 
+.contenedor .imagenProducto video{
+    width: 100%;
+    display: block;
+}
+
 .contenedor .infoProducto{
     width: 50%;
     margin: 2%;
@@ -44,4 +49,8 @@ body {
     text-align: center;
     background-color: rgba(30, 204, 210, 0.562);
     color: white;
+}
+
+.ocultar{
+    display: none;
 }
