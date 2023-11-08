@@ -24,7 +24,8 @@
             'visual' => $row['visual'],
             'fechaInicio' => $row['fechaInicio'],
             'fechaFinal' => $row['fechaFinal'],
-            'descripcion' => $row['descripcion']
+            'descripcion' => $row['descripcion'],
+            'duracion' => $row['duracion']
         ];
         $response = [
             'success' => true,

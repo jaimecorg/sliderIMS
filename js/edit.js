@@ -3,7 +3,7 @@ addEventListener('DOMContentLoaded', function() {
     const idProducto = urlParams.get('id');
 
     let formularioProducto = document.getElementById('formularioEdicion');
-    
+
     cargarDatosEnFormulario(idProducto);
     
     formularioProducto.addEventListener('submit', function(event) {
